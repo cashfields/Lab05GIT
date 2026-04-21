@@ -1,0 +1,40 @@
+
+img name="slide" width="400" height="200" />
+
+
+var i = 0; 			// Start Point
+var images = [];	// Images Array
+var time = 3000;	// Time Between Switch
+	 
+// Image List ".\images\.jpg";
+images[0] = ".\images\fun.jpg";
+images[1] = ".\images\installation.jpg";
+images[2] = ".\images\maintenance.jpg";
+images[3] = ".\images\pool.jpg";
+images[4] = ".\images\pump.jpg";
+images[5] = ".\images\swim.jpg";
+images[6] = ".\images\gang.jpeg";
+
+
+
+// Change Image
+function changeImg(){
+	document.slide.src = images[i];
+
+	// Check If Index Is Under Max
+	if(i < images.length - 1){
+	  // Add 1 to Index
+	  i++; 
+	} else { 
+		// Reset Back To O
+		i = 0;
+	}
+
+	// Run function every x seconds
+	setTimeout("changeImg()", time);
+}
+
+// Run function when page loads
+window.onload=changeImg;
+
+

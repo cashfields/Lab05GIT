@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Image Gallery</title>
+<meta charset="utf-8">
+
+<!-- added "style.css" to meet Criteria Requirements  -->
+ <link href="style.css" rel="stylesheet">
+<!-- prove that more than one CSS file can be attached -->
+<link href="more_fun_pools.css" rel="stylesheet">
+
+
+<link rel="icon" href= "./images/cash.ico" type="image/x-icon" >
+
+
+<style>
+
+
+#gallery ul { width: 250px;
+             list-style-type: none; }
+
+#gallery span { display: none; }
+
+
+
+
+#gallery a:hover span { display: block;
+                      position: fixed;
+                      top: 20%;
+                      left: 40%;
+                      text-align: center;
+                      color: white;
+                      text-shadow: 1px 7px 11px black;
+                      transform: translate(40%, 40%); /* true centering */
+					  }
+
+
+
+
+
+  
+
+.firstborder {
+    border: 3px solid red; /* Sets border width, style, and color */
+    padding: 2px;        /* Adds space between the image and the border */
+ 
+}
+
+.secondborder { 
+    border: 3px dashed green; /* Sets border width, style, and color */
+    padding: 2px;        /* Adds space between the image and the border */
+ 
+}
+
+
+.padded-item {
+  /* Adds space above and below the item's content */
+  padding-top: 130px;
+  padding-bottom: 0px;
+  padding-left: 0px ;
+  text-align: left;
+}
+
+
+
+
+
+
+
+</style>
+
+
+
+<script type="text/javascript">
+function Installation(node) {
+    return confirm("Please click on OK to continue to see Installation.");
+}
+</script>
+
+<script type="text/javascript">
+function Pump(node) {
+    return confirm("Please click on OK to continue to see Pump.");
+}
+</script>
+
+
+<script type="text/javascript">
+function Maintenance(node) {
+    return confirm("Please click on OK to continue to see Maintenance.");
+}
+</script>
+
+<script type="text/javascript">
+function Swim(node) {
+    return confirm("Please click on OK to continue to see Swim.");
+}
+</script>
+
+
+<script type="text/javascript">
+function More_Fun(node) {
+    return confirm("Please click on OK to continue to see More Fun.");
+}
+</script>
+
+
+
+
+
+
+
+</head>
+
+
+
+<body>
+
+
+<div id="wrapper">
+
+<header>
+<div id="content">
+<h1 style="font-family: sans-serif , Calibri ; color: red " >More Fun Pools </h1>
+</div>
+</header>
+
+
+<nav class="vertical-nav">
+        <!--
+Italicize all links
+Remove the default underline from all links
+-->
+
+        <a href="index.html" style="font-style: italic; text-decoration: none">
+                <img src="./images/p.ico" alt="Pool"  width="11" height="11"
+                >Home</a>
+
+        <a href="resources.html" style="font-style: italic;  text-decoration: none"
+          ><img src="./images/p.ico" alt="Pool"  width="11" height="11"
+                >Resources</a>
+
+        <a href="contact.html" style="font-style: italic; text-decoration: none"
+          ><img src="./images/p.ico" alt="Pool"  width="11" height="11">Contact</a
+        >
+
+        <a href="links.html" style="font-style: italic; text-decoration: none"
+          ><img src="./images/p.ico" alt="Pool"  width="11" height="11">Links</a
+        >
+
+        <a href="gallery.html" style="font-style: italic; text-decoration: none"
+          ><img src="./images/p.ico" alt="Pool"  width="11" height="11">Gallery</a
+        >
+
+        <a
+          href="staffdirectory.html"
+          style="font-style: italic; text-decoration: none"
+          ><img src="./images/p.ico" alt="Pool"  width="11" height="11">Staff Directory</a
+        >
+
+        <a
+          href="customerform.html"
+          style="font-style: italic; text-decoration: none"
+          ><img src="./images/p.ico" alt="Pool"  width="11" height="11">Customer Form</a>
+
+
+        <a   href="show.html"
+          style="font-style: italic; text-decoration: none"
+          ><img src="./images/p.ico" alt="Pool"  width="11" height="11">Slide Show</a>
+
+</nav>
+
+
+
+<main>
+
+<h2 style="font-family: sans-serif  , Calibri ; color: red ">Image Gallery</h2>
+
+
+
+
+
+
+<div id="gallery">
+<p>Hover over each image or click for a larger view</p>
+
+
+<ul>
+
+
+
+  <li>
+       <a href="./images/installation.jpg" 
+           id= "Installation" onclick="return Installation(this);">
+		   <img src ="./images/installation.jpg"
+          width="100"   height="75" alt="Installation"
+          class="firstborder" style="cursor: pointer;" >
+          <span><img  src="./images/installation.jpg"
+          width="200" height="120"  alt="Installation"
+          ><br>Installation</span></a>
+  </li>
+
+
+  <li>
+       <a href="./images/pump.jpg"
+        id= "Pump" onclick="return Pump(this);">
+		<img src="./images/pump.jpg"
+       width="100"   height="75" alt="Pump"
+       class="firstborder" >
+       <span><img src="./images/pump.jpg"
+       width="200" height="120" alt="Pump"
+       class="firstborder"
+       ><br>Pump</span></a>
+  </li>
+
+  <li>
+       <a href="./images/maintenance.jpg"
+      id= "Maintenance" onclick="return Maintenance(this);">
+	   <img src="./images/maintenance.jpg"
+       width="100"   height="75" alt="Maintenance"
+       class="firstborder" >
+       <span><img src="./images/maintenance.jpg"
+       width="200" height="120" alt="Maintenance"
+       class="firstborder"
+       ><br>Maintenance</span></a>
+  </li>
+
+  <li>
+       <a href="./images/swim.jpg"
+        id= "Swim" onclick="return Swim(this);">
+	   <img src="./images/swim.jpg"
+       width="100" height="75" alt="Swim"
+       class="secondborder" >
+       <span><img src="./images/swim.jpg"
+       width="200" height="120" alt="Swim"
+       class="secondborder"
+       ><br>Swim</span></a>
+  </li>
+
+
+  <li>
+       <a href="./images/fun.jpg"
+        id= "More Fun" onclick="return More_Fun(this);">
+	   <img src="./images/fun.jpg"
+       width="100" height="75" alt="More Fun"
+       class="secondborder" >
+       <span><img src="./images/fun.jpg"
+       width="200" height="120" alt="More Fun"
+       class="secondborder"
+       ><br>More Fun</span></a>
+  </li>
+
+
+
+</ul>
+</div>
+
+
+
+</main>
+
+
+</div>
+
+
+
+
+      <footer>
+        Copyright &copy; 2026 Tio CA$H
+        <br />
+        <a href="mailto:cash_fields@yahoo.com" target="_blank"
+          >cash_fields@yahoo.com</a
+        >
+		 <span style="float: right;">Last updated on: <span id="last-updated"></span></span>
+      </footer>
+    </div>
+
+<script>
+// Target the specific span in the footer
+const footerUpdate = document.getElementById("last-updated");
+// Set the text to the document's last modified date
+footerUpdate.textContent = document.lastModified;
+</script>
+
+
+
+
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+

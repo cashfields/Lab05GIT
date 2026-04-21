@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>More Fun Pools - Contact</title>
+		      				<meta charset="utf-8">
+
+	<!-- added "style.css" to meet Criteria Requirements  -->
+<link href="style.css" rel="stylesheet">
+<!-- prove that more than one CSS file can be attached -->
+<link href="more_fun_pools.css" rel="stylesheet">
+
+        <link href= "./images/pool.ico" rel="icon" type="image/x-icon" >
+
+<style>
+
+* text box instructions - change para to more visible */
+/* redefine <p> </p> for this page to be more readable */
+p {text-decoration: none;
+        font-weight: bold;
+        text-shadow: 0px 0px 0px white;
+        color: black;
+        font-size: 8px;
+        background-color: lightgray;
+        }
+
+
+
+
+</style>
+
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+
+<header>
+<div id="content">
+  <h1 style="font-family: sans-serif , Calibri ; color: red " >More Fun Pools </h1>
+</div>
+</header>
+
+
+
+<nav class="vertical-nav">
+        <!--
+Italicize all links
+Remove the default underline from all links
+-->
+
+        <a href="index.html" style="font-style: italic; text-decoration: none">
+                <img src="./images/p.ico" alt="Pool"  width="11" height="11"
+                >Home</a>
+
+        <a href="resources.html" style="font-style: italic;  text-decoration: none"
+          ><img src="./images/p.ico" alt="Pool"  width="11" height="11"
+                >Resources</a>
+
+        <a href="contact.html" style="font-style: italic; text-decoration: none"
+          ><img src="./images/p.ico" alt="Pool"  width="11" height="11">Contact</a
+        >
+
+        <a href="links.html" style="font-style: italic; text-decoration: none"
+          ><img src="./images/p.ico" alt="Pool"  width="11" height="11">Links</a
+        >
+
+        <a href="gallery.html" style="font-style: italic; text-decoration: none"
+          ><img src="./images/p.ico" alt="Pool"  width="11" height="11">Gallery</a
+        >
+
+        <a
+          href="staffdirectory.html"
+          style="font-style: italic; text-decoration: none"
+          ><img src="./images/p.ico" alt="Pool"  width="11" height="11">Staff Directory</a
+        >
+
+        <a
+          href="customerform.html"
+          style="font-style: italic; text-decoration: none"
+          ><img src="./images/p.ico" alt="Pool"  width="11" height="11">Customer Form</a>
+
+
+        <a   href="show.html"
+          style="font-style: italic; text-decoration: none"
+          ><img src="./images/p.ico" alt="Pool"  width="11" height="11">Slide Show</a>
+
+</nav>
+
+
+
+
+<main>
+
+<!-- Placeholder for the countdown message -->
+<p id="countdown-display"
+        style="color: blue; text-shadow: 0px 0px 0px white;
+        text-decoration: none;
+        font-weight: bold;
+        text-shadow: 0px 0px 0px white;
+        color: red;
+        font-size:      20px;
+        background-color: yellow;
+        text-align: center;
+
+</p>
+
+
+ <h2 style="font-family: sans-serif  , Calibri ; color: red " >Contact More Fun Pools Today</h2>
+
+<ul>
+  <li>E-mail:
+  <a href="mailto:cash_fields@yahoo.com" target="_blank">cash_fields@yahoo.com</a>
+
+  
+  
+  
+
+  </li>
+  <li>Phone: 555-555-5555</li>
+</ul>
+
+
+
+
+</main>
+
+
+
+
+
+<!-- css make the body the same size for all pages -->
+</div>
+
+      <footer>
+        Copyright &copy; 2026 Tio CA$H
+        <br>
+        <a href="mailto:cash_fields@yahoo.com" target="_blank"
+          >cash_fields@yahoo.com</a>
+                 <span style="float: right;">Last updated on: <span id="last-updated"></span></span>
+      </footer>
+    </div>
+
+<script>
+// Target the specific span in the footer
+const footerUpdate = document.getElementById("last-updated");
+// Set the text to the document's last modified date
+footerUpdate.textContent = document.lastModified;
+</script>
+
+
+<script>
+// 1. Set the event date (YYYY, MM-1, DD)
+// Note: Months are 0-indexed (January is 0, May is 4)
+const eventDate = new Date(2026, 10, 20);
+
+const d =eventDate
+const formatted = `
+${d.toLocaleString('default', { weekday: 'long' })} ,
+${d.toLocaleString('default', { month:'long'})},
+${d.getDate()}, ${d.getFullYear()}`;
+
+
+// 2. Get the current date and time
+const currentDate = new Date();
+
+// 3. Calculate the difference in milliseconds
+const timeDifference = eventDate - currentDate;
+
+// 4. Convert milliseconds to days (1000ms * 60s * 60m * 24h)
+const daysRemaining = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+
+// 5. Display the output in the HTML element
+const displayElement = document.getElementById("countdown-display");
+if (daysRemaining > 0) {
+    displayElement.innerHTML = `The sale ends ${formatted}
+        <br> There are ${daysRemaining} days remaining until the end of the sale!`;
+} else if (daysRemaining === 0) {
+    displayElement.innerHTML = "The sale is today!";
+} else {
+    displayElement.innerHTML = "The sale has ended.";
+}
+</script>
+
+</body>
+
+
+
+
+
+</html>
+
+
+
+
+
+

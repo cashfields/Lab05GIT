@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>More Fun Pools - Slide Show</title>
+<meta charset="utf-8">
+
+<!-- added "style.css" to meet Criteria Requirements  -->
+<link href="style.css" rel="stylesheet">
+<!-- prove that more than one CSS file can be attached -->
+<link href="more_fun_pools.css" rel="stylesheet">
+
+<link rel="icon" href= "./images/pool.ico" type="image/x-icon" >
+
+
+</head>
+
+
+<body>
+
+<div id="wrapper">
+
+
+<header>
+<div id="content">
+  <h1 style="font-family: sans-serif , Calibri ; color: red " >More Fun Pools </h1>
+</div>
+</header>
+
+
+<nav class="vertical-nav">
+        <!--
+Italicize all links
+Remove the default underline from all links
+-->
+
+        <a href="index.html" style="font-style: italic; text-decoration: none">
+                <img src="./images/p.ico" alt="Pool"  width="11" height="11"
+                >Home</a>
+
+        <a href="resources.html" style="font-style: italic;  text-decoration: none"
+          ><img src="./images/p.ico" alt="Pool"  width="11" height="11"
+                >Resources</a>
+
+        <a href="contact.html" style="font-style: italic; text-decoration: none"
+          ><img src="./images/p.ico" alt="Pool"  width="11" height="11">Contact</a
+        >
+
+        <a href="links.html" style="font-style: italic; text-decoration: none"
+          ><img src="./images/p.ico" alt="Pool"  width="11" height="11">Links</a
+        >
+
+        <a href="gallery.html" style="font-style: italic; text-decoration: none"
+          ><img src="./images/p.ico" alt="Pool"  width="11" height="11">Gallery</a
+        >
+
+        <a
+          href="staffdirectory.html"
+          style="font-style: italic; text-decoration: none"
+          ><img src="./images/p.ico" alt="Pool"  width="11" height="11">Staff Directory</a
+        >
+
+        <a
+          href="customerform.html"
+          style="font-style: italic; text-decoration: none"
+          ><img src="./images/p.ico" alt="Pool"  width="11" height="11">Customer Form</a>
+
+
+        <a   href="show.html"
+          style="font-style: italic; text-decoration: none"
+          ><img src="./images/p.ico" alt="Pool"  width="11" height="11">Slide Show</a>
+
+</nav>
+
+<main>
+<h2 style="font-family: sans-serif  , Calibri ; color: red " >Our Slide Show</h2>
+
+  <div class="gotlogo">
+
+  <!-- <h1>Slide Show</h1>> -->
+
+
+  <p style="text-decoration: none; text-shadow: 0px 0px 0px ; color: yellow" ><strong>Look for the below line of text in the html file. The text <span style="color: red;">- ('slide')[0] -</span> makes it happen
+   </strong></p>
+
+<p>
+  <code><strong>
+  document.getElementsByName('slide')[0].src = images[i];
+  </strong></code>
+</p>
+
+    <!-- <img src="./images/black.jpg" alt="GOT"> -->
+  </div>
+  <div class="slider" name='w'>
+    <img name="slide" height="150" width="300">
+  </div>
+  <p>
+    <br>
+  </p>
+</body>
+
+
+<script>
+
+// Source - https://stackoverflow.com/a/55664861
+// Posted by jasinth premkumar, modified by community. See post 'Timeline' for change history
+// Retrieved 2026-04-10, License - CC BY-SA 4.0
+
+var i = 0;                        // Start Point
+var images = [];        // Images Array
+var time = 4000;        // Time Between Switch
+
+// Image List
+//<!-- images[0] = "https://www.w3schools.com/html/pic_trulli.jpg"; -->
+//<!-- images[1] = "https://www.w3schools.com/html/img_girl.jpg"; -->
+//<!-- images[2]= "./images/fun.jpg"; -->
+// Image List ".\images\.jpg";
+images[0] = "./images/fun.jpg";
+images[1] = "./images/installation.jpg";
+images[2] = "./images/maintenance.jpg";
+images[3] = "./images/pool.jpg";
+images[4] = "./images/pump.jpg";
+images[5] = "./images/swim.jpg";
+images[6] = "./images/gang5.png";
+
+
+// Change Image
+function changeImg(){
+  document.getElementsByName('slide')[0].src = images[i];
+
+  // Check If Index Is Under Max
+  if (i < images.length - 1){
+    // Add 1 to Index
+    i++;
+  } else {
+    // Reset Back To O
+    i = 0;
+  }
+
+  // Run function every x seconds
+  setTimeout("changeImg()", time);
+}
+
+// Run function when page loads
+window.onload = changeImg;
+
+</script>
+
+
+
+
+</main>
+
+
+
+
+
+
+<!-- css make the body the same size for all pages -->
+</div>
+
+      <footer>
+        Copyright &copy; 2026 Tio CA$H
+        <br>
+        <a href="mailto:cash_fields@yahoo.com" target="_blank"
+          >cash_fields@yahoo.com</a>
+                 <span style="float: right;">Last updated on: <span id="last-updated"></span></span>
+      </footer>
+    </div>
+
+<script>
+// Target the specific span in the footer
+const footerUpdate = document.getElementById("last-updated");
+// Set the text to the document's last modified date
+footerUpdate.textContent = document.lastModified;
+</script>
+
+
+</body>
+
+
+
+</html>
