@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>More Fun Pools - Customer Form</title>
+<meta charset="utf-8">
+
+<!-- added "style.css" to meet Criteria Requirements  -->
+<link href="style.css" rel="stylesheet">
+<!-- prove that more than one CSS file can be attached -->
+<link href="more_fun_pools.css" rel="stylesheet">
+
+<link href= "./images/cash.ico" rel="icon" type="image/x-icon" >
+
+<style>
+
+.labcontain1 {
+    display: flex; /* Makes the children flex items, positioning them in a row by default */
+    gap: 118px; /* Adds space between the labels */
+}
+
+
+/* text box instructions - change para to more visible */
+/* redefine <p> </p> for this page to be more readable */
+ p {text-decoration: none;
+        font-weight: bold;
+        text-shadow: 0px 0px 0px white;
+        color: black;
+        font-size: 8px;
+        background-color: lightgray;
+        }
+
+.bold-label {
+  font-weight: bold;
+}
+
+
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-container:hover {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+.tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position above button */
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+
+
+</style>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js">
+</script>
+
+
+
+
+
+<script>
+    function subEmail()
+ {
+
+<!-- select radio button text -->
+let varworktype2 = document.querySelector('input[name="Work Type"]:checked').value;
+//<!-- alert(varworktype2) -->
+
+
+
+//<!-- select checkbox  text -->
+// Get all checked boxes in a specific group
+const checkedBoxes = document.querySelectorAll('input[name="Customer"]:checked');
+//<!-- alert('ck 1') -->
+// Convert the NodeList to an array and join with commas
+const varcustomer2 = Array.from(checkedBoxes)
+                      .map(cb => cb.value)
+                      .join(", ");
+//<!-- alert('ck 2') -->
+console.log("Selected hobbies: " + varcustomer2);
+ //<!-- alert(varcustomer2) -->
+ //<!-- alert('ck 3') -->
+
+
+ //<!-- select select list  text -->
+ // 1. Get the select element
+const selectElement = document.getElementById('ProjectSize');
+
+// 2. Get the index of the selected option
+const selectedIndex = selectElement.selectedIndex;
+
+// 3. Get the text of that specific option
+const selectedText = selectElement.options[selectedIndex].text;
+
+console.log(selectedText);
+const varprojectsize2 = selectedText
+//<!-- alert(varprojectsize2) -->
+
+
+
+
+const varfname = document.getElementById("FirstName").value;
+const varlname = document.getElementById("LastName").value;
+const varemail  = document.getElementById("userEmail").value;
+//<!-- const varworktype  = document.getElementById("Work Type").value;   -->
+//<!-- const varcustomer  = document.getElementById("Customer").value;   -->
+//<!-- const varprojectsize  = document.getElementById("ProjectSize").value; -->
+const varcomment = document.getElementById("Comment").value;
+ //alert(varcomment)
+    const email = "cash_fields@yahoo.com";
+    const sub = encodeURIComponent("Feedback For More Fun Pools");
+    const msg = encodeURIComponent("To: More Fun Pools , here is the form content:");
+          const crlf = "%0D%0A"
+
+ const msg0 = crlf.concat(" ", msg)
+        const msg1 = msg0.concat("%0D%0A%0D%0A From: ", varfname);
+        const msg2 = msg1.concat(" ", varlname);
+        const msg3 = msg2.concat("%0D%0A Email: ");
+        const msg4 = msg3.concat(varemail);
+        const msg5 = msg4.concat("%0D%0A Work Type: ");
+        const msg6 = msg5.concat(varworktype2);
+        const msg7 = msg6.concat("%0D%0A Customer Type: ");
+        const msg8 = msg7.concat(varcustomer2);
+        const msg9 = msg8.concat("%0D%0A ProjectSize: ");
+        const msg10 = msg9.concat(varprojectsize2);
+        const msg11 = msg10.concat("%0D%0A Comments: ");
+        const msg12 = msg11.concat(varcomment);
+  const msg13 = msg12.concat("%0D%0A%0D%0A Thank you ");
+
+        //<!-- alert('goint to mail') -->
+
+    // Combine into final mailto link
+    window.location.href = `mailto:${email}?subject=${sub}&body=${msg13}`;
+}
+
+
+</script>
+
+<script>
+//<!-- ######################################################### -->
+//<!--  after pressing reset button locate cursor in the top field  -->
+function subReset()     {
+        window.location.reload();
+                throw new Error();
+}
+</script>
+
+<script>
+//<!-- func to select only one xheck box -->
+function onlyOne(checkbox) {
+    var checkboxes = document.getElementsByName(checkbox.name)
+    checkboxes.forEach((item) => {
+        if (item !== checkbox) item.checked = false
+    })
+}
+</script>
+
+
+
+<script>
+document.getElementById('myImage').addEventListener('click', function() {
+    alert('You clicked the image!');
+});
+
+</script>
+
+
+
+
+
+
+<body>
+
+<div id="wrapper">
+
+
+<header>
+<div id="content">
+  <h1 style="font-family: sans-serif , Calibri ; color: red " >More Fun Pools </h1>
+</div>
+</header>
+
+
+
+<nav class="vertical-nav">
+        <!--
+Italicize all links
+Remove the default underline from all links
+-->
+
+        <a href="index.html" style="font-style: italic; text-decoration: none">
+                <img src="./images/p.ico" alt="Pool"  width="11" height="11"
+                >Home</a>
+
+        <a href="resources.html" style="font-style: italic;  text-decoration: none"
+          ><img src="./images/p.ico" alt="Pool"  width="11" height="11"
+                >Resources</a>
+
+        <a href="contact.html" style="font-style: italic; text-decoration: none"
+          ><img src="./images/p.ico" alt="Pool"  width="11" height="11">Contact</a
+        >
+
+        <a href="links.html" style="font-style: italic; text-decoration: none"
+          ><img src="./images/p.ico" alt="Pool"  width="11" height="11">Links</a
+        >
+
+        <a href="gallery.html" style="font-style: italic; text-decoration: none"
+          ><img src="./images/p.ico" alt="Pool"  width="11" height="11">Gallery</a
+        >
+
+        <a
+          href="staffdirectory.html"
+          style="font-style: italic; text-decoration: none"
+          ><img src="./images/p.ico" alt="Pool"  width="11" height="11">Staff Directory</a
+        >
+
+        <a
+          href="customerform.html"
+          style="font-style: italic; text-decoration: none"
+          ><img src="./images/p.ico" alt="Pool"  width="11" height="11">Customer Form</a>
+
+
+        <a   href="show.html"
+          style="font-style: italic; text-decoration: none"
+          ><img src="./images/p.ico" alt="Pool"  width="11" height="11">Slide Show</a>
+
+</nav>
+<main>
+ <h2 style="font-family: sans-serif  , Calibri ; color: red " >Customer Entry Form</h2>
+
+<!-- Start form -->
+
+<!-- <form action="/submit-page" method="POST"> -->
+<form id="myForm"  method="post" action="https://webdevbasics.net/scripts/demo.php" >
+
+
+
+<label for="First Name" class="bold-label"><span style="color:red;"}>*</span>
+First Name:</label>
+
+       <input type="text" id="FirstName" name="FirstName" autofocus required placeholder="Enter your First Name...">
+
+<label for="Last Name" class="bold-label"><span style="color:red;"}>*</span>
+Last Name:</label>
+
+
+       <input type="text" id="LastName" name="LastName" required placeholder="Enter your Last Name...">
+           <br>
+           <div>
+<br>
+
+  <label for="userEmail" class="bold-label"><span style="color: red;">*</span>
+  Your email address:</label>
+  <input
+    type="email"
+    id="userEmail"
+    name="userEmail"
+    placeholder="your_email@somewhere.com"
+    size="30"
+    maxlength="60"
+        required
+  >
+
+</div>
+
+
+  <p>Select your choice of future work:</p>
+  <input type="radio" id="newpool" name="Work Type" value="New Pool">
+  <label for="newpool" class="bold-label">New Pool</label><br>
+  <input type="radio" id="maintenance" name="Work Type" value="Maintenance">
+  <label for="maintenance" class="bold-label">Maintenance</label><br>
+  <input type="radio" id="design" name="Work Type" value="Design">
+  <label for="design" class="bold-label">Design</label><br>
+  <input type="radio" id="other" name="Work Type" value="Other">
+  <label for="other" class="bold-label">Other</label><br>
+
+
+
+  <p>Select if you are New or Returning Customer:</p>
+  <input type="checkbox" id="New" name="Customer" value="New"  onclick="onlyOne(this)">
+  <label for="New" class="bold-label">New Customer</label><br>
+  <input type="checkbox" id="Returning" name="Customer" value="Returning"  onclick="onlyOne(this)">
+  <label for="Returning" class="bold-label">Returning Customer </label><br>
+
+
+<p>Select a proposed ProjectSize:</p>
+<label for="ProjectSize"></label>
+<select name="ProjectSize" id="ProjectSize" required>
+  <option value="" disabled selected>Select A Size</option>
+  <option value="Small">Small: $500 to $1000</option>
+  <option value="Medium">Medium: $1000 to $5000</option>
+  <option value="Large">Large: $5000 and up</option>
+  <option value="Unsure Need Planning">Unsure: Need Help Planning</option>
+</select>
+     <br>
+
+     <br>
+
+     <label for="Comment" class="bold-label">
+      Comment:</label>
+      <br>
+
+      <textarea id="Comment" name="Comment" rows="4" cols="50" placeholder="Type your comment here..."></textarea>
+      <br>
+      <br>
+
+
+           <div style="display: flex; gap: 25px;">
+
+       <input title="Submit Form To Server" type="submit" value="Submit" >
+
+
+                <input title="Reset" type="button" value="Reset Form" onClick="subReset();" >
+
+
+
+       <input title="Send Email Of Form Data"  type="button" value="Email Information" onClick="subEmail();">
+           </div>
+
+
+
+    </form>
+
+</main>
+
+
+</div>
+
+
+      <footer>
+        Copyright &copy; 2026 Uncle Money
+        <br />
+        <a href="mailto:money_vesper@yahoo.com" target="_blank"
+          >money_vesper@yahoo.com</a
+        >
+                 <span style="float: right;">Last updated on: <span id="last-updated"></span></span>
+      </footer>
+    </div>
+
+<script>
+// Target the specific span in the footer
+const footerUpdate = document.getElementById("last-updated");
+// Set the text to the document's last modified date
+footerUpdate.textContent = document.lastModified;
+</script>
+
+
+
+</body>
+</html>
